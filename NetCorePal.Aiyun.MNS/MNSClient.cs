@@ -12,6 +12,7 @@ using Aliyun.MNS.Runtime.Internal.Auth;
 using Aliyun.MNS.Runtime.Pipeline;
 using Aliyun.MNS.Runtime.Pipeline.Handlers;
 using System.Threading.Tasks;
+using NetCorePal.Aiyun.MNS.Util;
 
 namespace Aliyun.MNS
 {
@@ -102,7 +103,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public Queue CreateQueue(string queueName)
         {
-            return CreateQueueAsync(queueName).Result;
+            return AggregateExceptionExtract.Extract(()=> 
+            {
+                return CreateQueueAsync(queueName).Result;
+            });
+           
         }
 
         public async Task<Queue> CreateQueueAsync(string queueName)
@@ -114,7 +119,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public Queue CreateQueue(CreateQueueRequest request)
         {
-            return CreateQueueAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return CreateQueueAsync(request).Result;
+            });
+           
         }
 
         public async Task<Queue> CreateQueueAsync(CreateQueueRequest request)
@@ -145,7 +154,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public DeleteQueueResponse DeleteQueue(string queueName)
         {
-            return DeleteQueueAsync(queueName).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return DeleteQueueAsync(queueName).Result;
+            });
+            
         }
 
         public async Task<DeleteQueueResponse> DeleteQueueAsync(string queueName)
@@ -157,7 +170,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public DeleteQueueResponse DeleteQueue(DeleteQueueRequest request)
         {
-            return DeleteQueueAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return DeleteQueueAsync(request).Result;
+            });
+           
         }
 
         public async Task<DeleteQueueResponse> DeleteQueueAsync(DeleteQueueRequest request)
@@ -176,7 +193,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ListQueueResponse ListQueue(string queueNamePrefix)
         {
-            return ListQueueAsync(queueNamePrefix).Result;
+            return AggregateExceptionExtract.Extract(()=> 
+            {
+                return ListQueueAsync(queueNamePrefix).Result;
+            });
+            
         }
 
         public async Task<ListQueueResponse> ListQueueAsync(string queueNamePrefix)
@@ -191,7 +212,10 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ListQueueResponse ListQueue(string queueNamePrefix, string marker, uint maxReturns)
         {
-            return ListQueueAsync(queueNamePrefix, marker, maxReturns).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ListQueueAsync(queueNamePrefix, marker, maxReturns).Result;
+            });   
         }
         public async Task<ListQueueResponse> ListQueueAsync(string queueNamePrefix, string marker, uint maxReturns)
         {
@@ -207,7 +231,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ListQueueResponse ListQueue(ListQueueRequest request)
         {
-            return ListQueueAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ListQueueAsync(request).Result;
+            });
+          
         }
 
         public async Task<ListQueueResponse> ListQueueAsync(ListQueueRequest request)
@@ -226,7 +254,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public Topic CreateTopic(string topicName)
         {
-            return CreateTopicAsync(topicName).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return CreateTopicAsync(topicName).Result;
+            });
+            
         }
 
         public async Task<Topic> CreateTopicAsync(string topicName)
@@ -239,7 +271,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public Topic CreateTopic(CreateTopicRequest request)
         {
-            return CreateTopicAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return CreateTopicAsync(request).Result;
+            });
+           
         }
 
        
@@ -269,7 +305,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public DeleteTopicResponse DeleteTopic(string topicName)
         {
-            return DeleteTopicAsync(topicName).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return DeleteTopicAsync(topicName).Result;
+            });
+            
         }
 
         public async Task<DeleteTopicResponse> DeleteTopicAsync(string topicName)
@@ -281,7 +321,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public DeleteTopicResponse DeleteTopic(DeleteTopicRequest request)
         {
-            return DeleteTopicAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return DeleteTopicAsync(request).Result;
+            });
+           
         }
 
         public async Task<DeleteTopicResponse> DeleteTopicAsync(DeleteTopicRequest request)
@@ -299,7 +343,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ListTopicResponse ListTopic(string topicNamePrefix)
         {
-            return ListTopicAsync(topicNamePrefix).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ListTopicAsync(topicNamePrefix).Result;
+            });
+           
         }
 
         public async Task<ListTopicResponse> ListTopicAsync(string topicNamePrefix)
@@ -314,7 +362,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ListTopicResponse ListTopic(string topicNamePrefix, string marker, uint maxReturns)
         {
-            return ListTopicAsync(topicNamePrefix, marker, maxReturns).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ListTopicAsync(topicNamePrefix, marker, maxReturns).Result;
+            });
+            
         }
 
         public async Task<ListTopicResponse> ListTopicAsync(string topicNamePrefix, string marker, uint maxReturns)
@@ -331,7 +383,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ListTopicResponse ListTopic(ListTopicRequest request)
         {
-            return ListTopicAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ListTopicAsync(request).Result;
+            });
+            
         }
 
         public async Task<ListTopicResponse> ListTopicAsync(ListTopicRequest request)
@@ -349,7 +405,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SetAccountAttributesResponse SetAccountAttributes(AccountAttributes attributes)
         {
-            return SetAccountAttributesAsync(attributes).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SetAccountAttributesAsync(attributes).Result;
+            });
+           
         }
 
         public async Task<SetAccountAttributesResponse> SetAccountAttributesAsync(AccountAttributes attributes)
@@ -361,7 +421,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SetAccountAttributesResponse SetAccountAttributes(SetAccountAttributesRequest request)
         {
-            return SetAccountAttributesAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SetAccountAttributesAsync(request).Result;
+            });
+           
         }
 
         public async Task<SetAccountAttributesResponse> SetAccountAttributesAsync(SetAccountAttributesRequest request)
@@ -379,7 +443,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public GetAccountAttributesResponse GetAccountAttributes()
         {
-            return GetAccountAttributesAsync().Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return GetAccountAttributesAsync().Result;
+            });
+            
         }
 
         public async Task<GetAccountAttributesResponse> GetAccountAttributesAsync()
@@ -391,7 +459,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public GetAccountAttributesResponse GetAccountAttributes(GetAccountAttributesRequest request)
         {
-            return GetAccountAttributesAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return GetAccountAttributesAsync(request).Result;
+            });
+            
         }
 
         public async Task<GetAccountAttributesResponse> GetAccountAttributesAsync(GetAccountAttributesRequest request)

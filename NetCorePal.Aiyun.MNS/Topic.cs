@@ -10,6 +10,7 @@ using Aliyun.MNS.Runtime;
 using Aliyun.MNS.Util;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using NetCorePal.Aiyun.MNS.Util;
 
 namespace Aliyun.MNS
 {
@@ -74,7 +75,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public GetTopicAttributesResponse GetAttributes()
         {
-            return GetAttributesAsync().Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return GetAttributesAsync().Result;
+            });
+           
         }
 
         public async Task<GetTopicAttributesResponse> GetAttributesAsync()
@@ -87,7 +92,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public GetTopicAttributesResponse GetAttributes(GetTopicAttributesRequest request)
         {
-            return GetAttributesAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return GetAttributesAsync(request).Result;
+            });
+            
         }
 
         public async Task<GetTopicAttributesResponse> GetAttributesAsync(GetTopicAttributesRequest request)
@@ -108,7 +117,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SetTopicAttributesResponse SetAttributes(TopicAttributes attributes)
         {
-            return SetAttributesAsync(attributes).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SetAttributesAsync(attributes).Result;
+            });
+          
         }
 
         public async Task<SetTopicAttributesResponse> SetAttributesAsync(TopicAttributes attributes)
@@ -121,7 +134,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SetTopicAttributesResponse SetAttributes(SetTopicAttributesRequest request)
         {
-            return SetAttributesAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SetAttributesAsync(request).Result;
+            });
+            
         }
 
         public async Task<SetTopicAttributesResponse> SetAttributesAsync(SetTopicAttributesRequest request)
@@ -142,7 +159,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SubscribeResponse Subscribe(string subscriptionName, string endpoint)
         {
-            return SubscribeAsync(subscriptionName, endpoint).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SubscribeAsync(subscriptionName, endpoint).Result;
+            });
+            
         }
 
         public async Task<SubscribeResponse> SubscribeAsync(string subscriptionName, string endpoint)
@@ -153,7 +174,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SubscribeResponse Subscribe(SubscribeRequest request)
         {
-            return SubscribeAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SubscribeAsync(request).Result;
+            });
+            
         }
 
         public async Task<SubscribeResponse> SubscribeAsync(SubscribeRequest request)
@@ -173,7 +198,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public UnsubscribeResponse Unsubscribe(string subscriptionName)
         {
-            return UnsubscribeAsync(subscriptionName).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return UnsubscribeAsync(subscriptionName).Result;
+            });
+           
         }
 
         public async Task<UnsubscribeResponse> UnsubscribeAsync(string subscriptionName)
@@ -185,7 +214,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public UnsubscribeResponse Unsubscribe(UnsubscribeRequest request)
         {
-            return UnsubscribeAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return UnsubscribeAsync(request).Result;
+            });
+           
         }
 
         public async Task<UnsubscribeResponse> UnsubscribeAsync(UnsubscribeRequest request)
@@ -205,7 +238,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public GetSubscriptionAttributeResponse GetSubscriptionAttribute(string subscriptionName)
         {
-            return GetSubscriptionAttributeAsync(subscriptionName).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return GetSubscriptionAttributeAsync(subscriptionName).Result;
+            });
+           
         }
 
         public async Task<GetSubscriptionAttributeResponse> GetSubscriptionAttributeAsync(string subscriptionName)
@@ -216,7 +253,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public GetSubscriptionAttributeResponse GetSubscriptionAttribute(GetSubscriptionAttributeRequest request)
         {
-            return GetSubscriptionAttributeAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return GetSubscriptionAttributeAsync(request).Result;
+            });
+            
         }
 
         public async Task<GetSubscriptionAttributeResponse> GetSubscriptionAttributeAsync(GetSubscriptionAttributeRequest request)
@@ -236,7 +277,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SetSubscriptionAttributeResponse SetSubscriptionAttribute(string subscriptionName, SubscriptionAttributes attributes)
         {
-            return SetSubscriptionAttributeAsync(subscriptionName, attributes).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SetSubscriptionAttributeAsync(subscriptionName, attributes).Result;
+            });
+          
         }
 
         public async Task<SetSubscriptionAttributeResponse> SetSubscriptionAttributeAsync(string subscriptionName, SubscriptionAttributes attributes)
@@ -248,7 +293,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SetSubscriptionAttributeResponse SetSubscriptionAttribute(SetSubscriptionAttributeRequest request)
         {
-            return SetSubscriptionAttributeAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SetSubscriptionAttributeAsync(request).Result;
+            });
+            
         }
 
        
@@ -269,7 +318,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ListSubscriptionResponse ListSubscription(string subscriptionNamePrefix)
         {
-            return ListSubscriptionAsync(subscriptionNamePrefix).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ListSubscriptionAsync(subscriptionNamePrefix).Result;
+            });
+            
         }
 
         public async Task<ListSubscriptionResponse> ListSubscriptionAsync(string subscriptionNamePrefix)
@@ -285,7 +338,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ListSubscriptionResponse ListSubscription(string subscriptionNamePrefix, string marker, uint maxReturns)
         {
-            return ListSubscriptionAsync(subscriptionNamePrefix, marker, maxReturns).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ListSubscriptionAsync(subscriptionNamePrefix, marker, maxReturns).Result;
+            });
+            
         }
 
         public async Task<ListSubscriptionResponse> ListSubscriptionAsync(string subscriptionNamePrefix, string marker, uint maxReturns)
@@ -303,7 +360,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ListSubscriptionResponse ListSubscription(ListSubscriptionRequest request)
         {
-            return ListSubscriptionAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ListSubscriptionAsync(request).Result;
+            });
+           
         }
 
         public async Task<ListSubscriptionResponse> ListSubscriptionAsync(ListSubscriptionRequest request)
@@ -323,7 +384,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public PublishMessageResponse PublishMessage(string messageBody)
         {
-            return PublishMessageAsync(messageBody).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return PublishMessageAsync(messageBody).Result;
+            });
+           
         }
 
         public async Task<PublishMessageResponse> PublishMessageAsync(string messageBody)
@@ -335,7 +400,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public PublishMessageResponse PublishMessage(PublishMessageRequest request)
         {
-            return PublishMessageAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return PublishMessageAsync(request).Result;
+            });
+           
         }
 
         public async Task<PublishMessageResponse> PublishMessageAsync(PublishMessageRequest request)

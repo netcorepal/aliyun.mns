@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>netcorepal</Authors>
+    <Company>netcorepal</Company>
+    <Description>Aliyun MNS SDK Integrate With the DependencyInjection of the MiscroSoft</Description>
+    <PackageProjectUrl>https://github.com/netcorepal/aliyun.mns.git</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/netcorepal/aliyun.mns.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>netcorepal MNS DI</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

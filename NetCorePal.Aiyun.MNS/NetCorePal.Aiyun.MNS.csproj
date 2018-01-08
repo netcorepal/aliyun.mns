@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>netcorepal</Authors>
+    <Company>netcorepal</Company>
+    <PackageProjectUrl>https://github.com/netcorepal/aliyun.mns.git</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/netcorepal/aliyun.mns.git</RepositoryUrl>
+    <Description>Aliyun MNS SDK for .net standrad and supprot Task for async</Description>
+    <PackageTags>netcorepal MNS</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

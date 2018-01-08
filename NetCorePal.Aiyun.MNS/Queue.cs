@@ -10,6 +10,7 @@ using Aliyun.MNS.Runtime;
 using Aliyun.MNS.Util;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using NetCorePal.Aiyun.MNS.Util;
 
 namespace Aliyun.MNS
 {
@@ -64,7 +65,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public GetQueueAttributesResponse GetAttributes()
         {
-            return GetAttributesAsync().Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return GetAttributesAsync().Result;
+            });
+           
         }
 
         public async Task<GetQueueAttributesResponse> GetAttributesAsync()
@@ -76,7 +81,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public GetQueueAttributesResponse GetAttributes(GetQueueAttributesRequest request)
         {
-            return GetAttributesAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return GetAttributesAsync(request).Result;
+            });
+           
         }
 
         public async Task<GetQueueAttributesResponse> GetAttributesAsync(GetQueueAttributesRequest request)
@@ -98,7 +107,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SetQueueAttributesResponse SetAttributes(QueueAttributes attributes)
         {
-            return SetAttributesAsync(attributes).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SetAttributesAsync(attributes).Result;
+            });
+           
         }
 
         public async Task<SetQueueAttributesResponse> SetAttributesAsync(QueueAttributes attributes)
@@ -111,7 +124,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SetQueueAttributesResponse SetAttributes(SetQueueAttributesRequest request)
         {
-            return SetAttributesAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SetAttributesAsync(request).Result;
+            });
+           
         }
 
       
@@ -132,8 +149,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ChangeMessageVisibilityResponse ChangeMessageVisibility(string receiptHandle, int visibilityTimeout)
         {
-
-            return ChangeMessageVisibilityAsync(receiptHandle, visibilityTimeout).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ChangeMessageVisibilityAsync(receiptHandle, visibilityTimeout).Result;
+            });
+           
         }
 
         public async Task<ChangeMessageVisibilityResponse> ChangeMessageVisibilityAsync(string receiptHandle, int visibilityTimeout)
@@ -150,7 +170,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ChangeMessageVisibilityResponse ChangeMessageVisibility(ChangeMessageVisibilityRequest request)
         {
-            return ChangeMessageVisibilityAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ChangeMessageVisibilityAsync(request).Result;
+            });
+           
         }
        
         public async Task<ChangeMessageVisibilityResponse> ChangeMessageVisibilityAsync(ChangeMessageVisibilityRequest request)
@@ -171,7 +195,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public DeleteMessageResponse DeleteMessage(string receiptHandle)
         {
-            return DeleteMessageAsync(receiptHandle).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return DeleteMessageAsync(receiptHandle).Result;
+            });
+           
         }
 
         public async Task<DeleteMessageResponse> DeleteMessageAsync(string receiptHandle)
@@ -184,7 +212,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public DeleteMessageResponse DeleteMessage(DeleteMessageRequest request)
         {
-            return DeleteMessageAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return DeleteMessageAsync(request).Result;
+            });
+            
         }
 
         public async Task<DeleteMessageResponse> DeleteMessageAsync(DeleteMessageRequest request)
@@ -200,7 +232,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public BatchDeleteMessageResponse BatchDeleteMessage(BatchDeleteMessageRequest request)
         {
-            return BatchDeleteMessageAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return BatchDeleteMessageAsync(request).Result;
+            });
+            
         }
 
         public async Task<BatchDeleteMessageResponse> BatchDeleteMessageAsync(BatchDeleteMessageRequest request)
@@ -220,7 +256,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ReceiveMessageResponse ReceiveMessage()
         {
-            return ReceiveMessageAsync().Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ReceiveMessageAsync().Result;
+            });
+           
         }
 
         public async Task<ReceiveMessageResponse> ReceiveMessageAsync()
@@ -233,7 +273,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ReceiveMessageResponse ReceiveMessage(uint waitSeconds)
         {
-            return ReceiveMessageAsync(waitSeconds).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ReceiveMessageAsync(waitSeconds).Result;
+            });
+           
         }
 
         public async Task<ReceiveMessageResponse> ReceiveMessageAsync(uint waitSeconds)
@@ -245,7 +289,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public ReceiveMessageResponse ReceiveMessage(ReceiveMessageRequest request)
         {
-            return ReceiveMessageAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return ReceiveMessageAsync(request).Result;
+            });
+            
         }
 
         public async Task<ReceiveMessageResponse> ReceiveMessageAsync(ReceiveMessageRequest request)
@@ -261,7 +309,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public BatchReceiveMessageResponse BatchReceiveMessage(uint batchSize)
         {
-            return BatchReceiveMessageAsync(batchSize).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return BatchReceiveMessageAsync(batchSize).Result;
+            });
+            
         }
 
         public async Task<BatchReceiveMessageResponse> BatchReceiveMessageAsync(uint batchSize)
@@ -273,7 +325,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public BatchReceiveMessageResponse BatchReceiveMessage(uint batchSize, uint waitSeconds)
         {
-            return BatchReceiveMessageAsync(batchSize, waitSeconds).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return BatchReceiveMessageAsync(batchSize, waitSeconds).Result;
+            });
+            
         }
 
         public async Task<BatchReceiveMessageResponse> BatchReceiveMessageAsync(uint batchSize, uint waitSeconds)
@@ -285,7 +341,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public BatchReceiveMessageResponse BatchReceiveMessage(BatchReceiveMessageRequest request)
         {
-            return BatchReceiveMessageAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return BatchReceiveMessageAsync(request).Result;
+            });
+           
         }
 
         public async Task<BatchReceiveMessageResponse> BatchReceiveMessageAsync(BatchReceiveMessageRequest request)
@@ -305,7 +365,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public PeekMessageResponse PeekMessage()
         {
-            return PeekMessageAsync().Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return PeekMessageAsync().Result;
+            });
+            
         }
 
         public async Task<PeekMessageResponse> PeekMessageAsync()
@@ -318,7 +382,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public PeekMessageResponse PeekMessage(PeekMessageRequest request)
         {
-            return PeekMessageAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return PeekMessageAsync(request).Result;
+            });
+           
         }
        
         public async Task<PeekMessageResponse> PeekMessageAsync(PeekMessageRequest request)
@@ -333,7 +401,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public BatchPeekMessageResponse BatchPeekMessage(uint batchSize)
         {
-            return BatchPeekMessageAsync(batchSize).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return BatchPeekMessageAsync(batchSize).Result;
+            });
+            
         }
 
         public async Task<BatchPeekMessageResponse> BatchPeekMessageAsync(uint batchSize)
@@ -345,7 +417,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public BatchPeekMessageResponse BatchPeekMessage(BatchPeekMessageRequest request)
         {
-            return BatchPeekMessageAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return BatchPeekMessageAsync(request).Result;
+            });
+            
         }
 
         public async Task<BatchPeekMessageResponse> BatchPeekMessageAsync(BatchPeekMessageRequest request)
@@ -365,7 +441,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SendMessageResponse SendMessage(string messageBody)
         {
-            return SendMessageAsync(messageBody).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SendMessageAsync(messageBody).Result;
+            });
+           
         }
 
         public async Task<SendMessageResponse> SendMessageAsync(string messageBody)
@@ -377,7 +457,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SendMessageResponse SendMessage(string messageBody, uint delaySeconds, uint priority)
         {
-            return SendMessageAsync(messageBody, delaySeconds, priority).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SendMessageAsync(messageBody, delaySeconds, priority).Result;
+            });
+           
         }
 
         public async Task<SendMessageResponse> SendMessageAsync(string messageBody, uint delaySeconds, uint priority)
@@ -394,7 +478,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public SendMessageResponse SendMessage(SendMessageRequest request)
         {
-            return SendMessageAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return SendMessageAsync(request).Result;
+            });
+           
         }
 
         public async Task<SendMessageResponse> SendMessageAsync(SendMessageRequest request)
@@ -410,7 +498,11 @@ namespace Aliyun.MNS
         /// <inheritdoc/>
         public BatchSendMessageResponse BatchSendMessage(BatchSendMessageRequest request)
         {
-            return BatchSendMessageAsync(request).Result;
+            return AggregateExceptionExtract.Extract(() =>
+            {
+                return BatchSendMessageAsync(request).Result;
+            });
+            
         }
 
         public async Task<BatchSendMessageResponse> BatchSendMessageAsync(BatchSendMessageRequest request)

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorePal.Aliyun.MNS", "NetCorePal.Aliyun.MNS\NetCorePal.Aliyun.MNS.csproj", "{A7AAE399-0540-420E-BD66-947E9526AAED}"
 EndProject
@@ -10,6 +10,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorePal.Aliyun.MNS.Tests", "NetCorePal.Aliyun.MNS.Tests\NetCorePal.Aliyun.MNS.Tests.csproj", "{24649F07-24F9-4CE3-A059-7C3654FD2EC8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorePal.Aliyun.MNS.DependencyInjection", "NetCorePal.Aliyun.MNS.DependencyInjection\NetCorePal.Aliyun.MNS.DependencyInjection.csproj", "{B0AF3049-B081-4AED-921E-34B69B50E819}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5206BB71-880F-4B3C-8E91-F1E9BF6138C1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

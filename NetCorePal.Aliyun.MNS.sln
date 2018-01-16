@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorePal.Aiyun.MNS", "NetCorePal.Aiyun.MNS\NetCorePal.Aiyun.MNS.csproj", "{A7AAE399-0540-420E-BD66-947E9526AAED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorePal.Aliyun.MNS", "NetCorePal.Aliyun.MNS\NetCorePal.Aliyun.MNS.csproj", "{A7AAE399-0540-420E-BD66-947E9526AAED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCorePal.Aiyun.MNS_Sample", "NetCorePal.Aiyun.MNS_Sample\NetCorePal.Aiyun.MNS_Sample.csproj", "{681A111B-AF64-4648-B78A-52380D8FDC26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCorePal.Aliyun.MNS_Sample", "NetCorePal.Aliyun.MNS_Sample\NetCorePal.Aliyun.MNS_Sample.csproj", "{681A111B-AF64-4648-B78A-52380D8FDC26}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorePal.Aiyun.MNS.Tests", "NetCorePal.Aiyun.MNS.Tests\NetCorePal.Aiyun.MNS.Tests.csproj", "{24649F07-24F9-4CE3-A059-7C3654FD2EC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorePal.Aliyun.MNS.Tests", "NetCorePal.Aliyun.MNS.Tests\NetCorePal.Aliyun.MNS.Tests.csproj", "{24649F07-24F9-4CE3-A059-7C3654FD2EC8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorePal.Aiyun.MNS.DependencyInjection", "NetCorePal.Aiyun.MNS.DependencyInjection\NetCorePal.Aiyun.MNS.DependencyInjection.csproj", "{B0AF3049-B081-4AED-921E-34B69B50E819}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCorePal.Aliyun.MNS.DependencyInjection", "NetCorePal.Aliyun.MNS.DependencyInjection\NetCorePal.Aliyun.MNS.DependencyInjection.csproj", "{B0AF3049-B081-4AED-921E-34B69B50E819}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

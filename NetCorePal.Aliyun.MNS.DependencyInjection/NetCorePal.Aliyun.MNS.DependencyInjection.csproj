@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCorePal.Aiyun.MNS\NetCorePal.Aiyun.MNS.csproj" />
+    <ProjectReference Include="..\NetCorePal.Aliyun.MNS\NetCorePal.Aliyun.MNS.csproj" />
   </ItemGroup>
   
 </Project>

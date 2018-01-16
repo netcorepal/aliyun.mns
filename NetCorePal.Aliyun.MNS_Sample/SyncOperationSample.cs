@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace NetCorePal.Aiyun.MNS_Sample
+namespace NetCorePal.Aliyun.MNS_Sample
 {
     /// <summary>
     /// Samples for all supported sync operations of MNS Queue.
@@ -40,8 +40,8 @@ namespace NetCorePal.Aiyun.MNS_Sample
             _endpoint = config.EndPoint;
 
             #region Queue Releated Test Cases
-
-            IMNS client = new Aliyun.MNS.MNSClient(_accessKeyId, _secretAccessKey, _endpoint, _stsToken);
+  
+            IMNS client = new MNSClient(_accessKeyId, _secretAccessKey, _endpoint, _stsToken);
 
             try
             {

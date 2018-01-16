@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace NetCorePal.Aiyun.MNS.Tests.Model.Internal.MarshallTransformations
+namespace NetCorePal.Aliyun.MNS.Tests.Model.Internal.MarshallTransformations
 {
     [TestFixture]
     public class ReceiveMessageResponseUnmarshallerTests

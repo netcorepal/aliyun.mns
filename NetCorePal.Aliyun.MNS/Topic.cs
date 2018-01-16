@@ -10,7 +10,7 @@ using Aliyun.MNS.Runtime;
 using Aliyun.MNS.Util;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using NetCorePal.Aiyun.MNS.Util;
+using NetCorePal.Aliyun.MNS.Util;
 
 namespace Aliyun.MNS
 {

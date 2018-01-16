@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace NetCorePal.Aiyun.MNS.Tests
+namespace NetCorePal.Aliyun.MNS_Sample
 {
     public class ConfigModel
     {

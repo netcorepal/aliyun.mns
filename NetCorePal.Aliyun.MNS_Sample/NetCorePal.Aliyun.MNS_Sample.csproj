@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{681A111B-AF64-4648-B78A-52380D8FDC26}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>NetCorePal.Aiyun.MNS_Sample</RootNamespace>
-    <AssemblyName>NetCorePal.Aiyun.MNS_Sample</AssemblyName>
+    <RootNamespace>NetCorePal.Aliyun.MNS_Sample</RootNamespace>
+    <AssemblyName>NetCorePal.Aliyun.MNS_Sample</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>NetCorePal.Aiyun.MNS_Sample.SyncOperationSample</StartupObject>
+    <StartupObject>NetCorePal.Aliyun.MNS_Sample.SyncOperationSample</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Win32.Registry, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -68,9 +68,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NetCorePal.Aiyun.MNS\NetCorePal.Aiyun.MNS.csproj">
+    <ProjectReference Include="..\NetCorePal.Aliyun.MNS\NetCorePal.Aliyun.MNS.csproj">
       <Project>{a7aae399-0540-420e-bd66-947e9526aaed}</Project>
-      <Name>NetCorePal.Aiyun.MNS</Name>
+      <Name>NetCorePal.Aliyun.MNS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetCorePal.Aiyun.MNS_Sample
+namespace NetCorePal.Aliyun.MNS_Sample
 {
     /// <summary>
     /// Samples for all supported sync operations of MNS.
@@ -34,7 +34,7 @@ namespace NetCorePal.Aiyun.MNS_Sample
 
             #region Topic Releated Test Cases
 
-            IMNS client = new Aliyun.MNS.MNSClient(_accessKeyId, _secretAccessKey, _endpoint);
+            IMNS client = new MNSClient(_accessKeyId, _secretAccessKey, _endpoint);
 
             /* 1.1. Create queue */
             var createTopicRequest = new CreateTopicRequest

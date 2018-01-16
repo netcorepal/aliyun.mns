@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("NetCorePal.Aiyun.MNS_Sample")]
+[assembly: AssemblyTitle("NetCorePal.Aliyun.MNS_Sample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NetCorePal.Aiyun.MNS_Sample")]
+[assembly: AssemblyProduct("NetCorePal.Aliyun.MNS_Sample")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

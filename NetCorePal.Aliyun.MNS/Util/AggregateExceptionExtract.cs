@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetCorePal.Aiyun.MNS.Util
+namespace NetCorePal.Aliyun.MNS.Util
 {
     public class AggregateExceptionExtract
     {

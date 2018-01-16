@@ -8,7 +8,7 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 
-namespace NetCorePal.Aiyun.MNS.Tests
+namespace NetCorePal.Aliyun.MNS.Tests
 {
     [TestFixture]
     public class QueueTests
@@ -39,7 +39,7 @@ namespace NetCorePal.Aiyun.MNS.Tests
             _accessKeyId = config.AccessKeyId;
             _secretAccessKey = config.AccessKey;
             _endpoint = config.EndPoint;
-            client = new Aliyun.MNS.MNSClient(_accessKeyId, _secretAccessKey, _endpoint);
+            client = new MNSClient(_accessKeyId, _secretAccessKey, _endpoint);
             client.CreateQueue("UTQueue");
             try
             {

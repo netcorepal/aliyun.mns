@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetCorePal.Aiyun.MNS_Sample
+namespace NetCorePal.Aliyun.MNS_Sample
 {
     public class SendMessage
     {
@@ -15,7 +15,7 @@ namespace NetCorePal.Aiyun.MNS_Sample
         {
             var config = Newtonsoft.Json.JsonConvert.DeserializeObject<ConfigModel>(File.ReadAllText(@"E:\MNS.json"));
 
-            IMNS client = new Aliyun.MNS.MNSClient(config.AccessKeyId, config.AccessKey, config.EndPoint, null);
+            IMNS client = new MNSClient(config.AccessKeyId, config.AccessKey, config.EndPoint, null);
             //var index = 1;
             //while (index<=100)
             //{

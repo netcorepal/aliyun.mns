@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace NetCorePal.Aiyun.MNS_Sample
+namespace NetCorePal.Aliyun.MNS_Sample
 {
     /// <summary>
     /// Samples for all supported async operations of MNS.

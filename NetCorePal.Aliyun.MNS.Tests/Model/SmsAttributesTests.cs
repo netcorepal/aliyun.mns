@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetCorePal.Aiyun.MNS.Tests.Model
+namespace NetCorePal.Aliyun.MNS.Tests.Model
 {
     [TestFixture]
     public class SmsAttributesTests

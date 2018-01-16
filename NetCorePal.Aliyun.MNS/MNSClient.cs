@@ -12,7 +12,7 @@ using Aliyun.MNS.Runtime.Internal.Auth;
 using Aliyun.MNS.Runtime.Pipeline;
 using Aliyun.MNS.Runtime.Pipeline.Handlers;
 using System.Threading.Tasks;
-using NetCorePal.Aiyun.MNS.Util;
+using NetCorePal.Aliyun.MNS.Util;
 
 namespace Aliyun.MNS
 {

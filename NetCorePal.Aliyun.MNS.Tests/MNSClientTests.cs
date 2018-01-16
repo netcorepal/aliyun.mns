@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace NetCorePal.Aiyun.MNS.Tests
+namespace NetCorePal.Aliyun.MNS.Tests
 {
     [TestFixture]
     public class MNSClientTests
@@ -23,7 +23,7 @@ namespace NetCorePal.Aiyun.MNS.Tests
             _secretAccessKey = config.AccessKey;
             _endpoint = config.EndPoint;
 
-            IMNS client = new Aliyun.MNS.MNSClient(_accessKeyId, _secretAccessKey, _endpoint);
+            IMNS client = new MNSClient(_accessKeyId, _secretAccessKey, _endpoint);
 
             var resp = client.GetAccountAttributes();
             var originalLoggingBucket = resp.Attributes.LoggingBucket;

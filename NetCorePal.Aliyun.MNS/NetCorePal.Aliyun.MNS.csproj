@@ -10,6 +10,8 @@
     <Description>Aliyun MNS SDK for .net standrad and supprot Task for async</Description>
     <PackageTags>netcorepal MNS</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>添加获取订阅属性时返回FilterTag</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

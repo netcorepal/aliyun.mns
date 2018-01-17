@@ -27,6 +27,7 @@ namespace Aliyun.MNS.Model
         }
 
         private string _endpoint;
+        private string _filterTag;
 
         private string _subscriptionName;
         private string _topicName;
@@ -73,6 +74,15 @@ namespace Aliyun.MNS.Model
         {
             get { return this._endpoint; }
             set { this._endpoint = value; }
+        }
+
+        /// <summary>
+        /// Gets and sets the property FilterTag. 
+        /// </summary>
+        public string FilterTag
+        {
+            get { return this._filterTag; }
+            set { this._filterTag = value; }
         }
 
         // Check to see if EndPoint property is set

@@ -50,6 +50,10 @@ namespace Aliyun.MNS.Model.Internal.MarshallTransformations
                                 reader.Read();
                                 attributes.EndPoint = reader.Value;
                                 break;
+                            case MNSConstants.XML_ELEMENT_FILTER_TAG:
+                                reader.Read();
+                                attributes.FilterTag = reader.Value;
+                                break;
                             case MNSConstants.XML_ELEMENT_NOTIFY_STRATEGY:
                                 reader.Read();
                                 string strategyStr = reader.Value;
